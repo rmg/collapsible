@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link href="//ajax.googleapis.com/ajax/libs/jqueryui/1.7.2/themes/base/jquery-ui.css" rel="stylesheet" type="text/css">
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+<!--<script src="//ajax.googleapis.com/ajax/libs/jqueryui/1.7.2/jquery-ui.min.js"></script> -->
+<meta charset=utf-8 />
+<title>JS Bin</title>
+<!--[if IE]>
+  <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+<![endif]-->
+</head>
+<body>
+  <h1>jQuery.collapsible()</h1>
+  <p>There may be a newer version available. Increment the number at the end of the URL to find out.</p>
+  <fieldset>
+    <legend>Not Collapsbible</legend>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam in nisi magna. Pellentesque volutpat, enim et faucibus placerat, est lacus rutrum ante, sollicitudin lobortis massa sapien eget urna. Curabitur ac risus eget turpis blandit scelerisque. Nulla egestas mollis velit quis mattis. Morbi id dui venenatis nisi tincidunt tempor. Morbi libero erat, suscipit quis dictum nec, mattis quis lectus. </p>
+  </fieldset>
+  <fieldset class="startClosed">
+    <legend>Starting Closed</legend>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam in nisi magna. Pellentesque volutpat, enim et faucibus placerat, est lacus rutrum ante, sollicitudin lobortis massa sapien eget urna. Curabitur ac risus eget turpis blandit scelerisque. Nulla egestas mollis velit quis mattis.</p>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam in nisi magna. Pellentesque volutpat, enim et faucibus placerat, est lacus rutrum ante, sollicitudin lobortis massa sapien eget urna. Curabitur ac risus eget turpis blandit scelerisque. Nulla egestas mollis velit quis mattis.</p>
+  </fieldset>
+  <fieldset class="startClosed">
+    <legend>Starting closed, with nesting</legend>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam in nisi magna. Pellentesque volutpat, enim et faucibus placerat, est lacus rutrum ante, sollicitudin lobortis massa sapien eget urna. Curabitur ac risus eget turpis blandit scelerisque. Nulla egestas mollis velit quis mattis.</p>
+    <fieldset class="startClosed">
+      <legend>Starting closed, nested</legend>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam in nisi magna. Pellentesque volutpat, enim et faucibus placerat, est lacus rutrum ante, sollicitudin lobortis massa sapien eget urna. Curabitur ac risus eget turpis blandit scelerisque. Nulla egestas mollis velit quis mattis.</p>
+    </fieldset>
+  </fieldset>
+  <fieldset class="collap">
+    <legend>Can Collapse Me!</legend>
+    <h2>1914 translation by H. Rackham</h2>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam in nisi magna. Pellentesque volutpat, enim et faucibus placerat, est lacus rutrum ante, sollicitudin lobortis massa sapien eget urna. Curabitur ac risus eget turpis blandit scelerisque. Nulla egestas mollis velit quis mattis.</p>
+  </fieldset>
+  <fieldset class="collap">
+    <legend>Can Collapse Me!</legend>
+    <h2>1914 translation by H. Rackham</h2>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam in nisi magna. Pellentesque volutpat, enim et faucibus placerat, est lacus rutrum ante, sollicitudin lobortis massa sapien eget urna. Curabitur ac risus eget turpis blandit scelerisque. Nulla egestas mollis velit quis mattis.</p>
+      <fieldset class="collap">
+    <legend>Can Collapse Me!</legend>
+    <h2>1914 translation by H. Rackham</h2>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam in nisi magna. Pellentesque volutpat, enim et faucibus placerat, est lacus rutrum ante, sollicitudin lobortis massa sapien eget urna. Curabitur ac risus eget turpis blandit scelerisque. Nulla egestas mollis velit quis mattis.</p>
+  </fieldset>
+  </fieldset>
+  <script>
+    $(function() {
+      $(".collap").collapsible();
+      $(".startClosed").collapsible({collapsed: true});
+    });
+  </script>
+</body>
+</html>
